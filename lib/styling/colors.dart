@@ -1,11 +1,12 @@
-
 import 'package:flutter/material.dart';
 
 class AppColors {
   //uncategorized
- static const background = Color.fromRGBO(41, 47, 63, 100);
+  static const background = Color.fromARGB(255, 41, 47, 63);
 
- static const darkBack = Color.fromRGBO(17, 19, 26, 100);
+  static const darkBack = Color.fromARGB(255, 17, 19, 26);
+
+  static const lightBack = Color.fromARGB(255, 65, 71, 86);
   //grey
   static const greys = MaterialColor(
     0xffDCDCDC, //same as grey100 from the design guide

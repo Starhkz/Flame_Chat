@@ -10,7 +10,7 @@ class AppString {
   static const svgSearch = '${baseAssetString}search_svg.svg';
   static const svgScroll = '${baseAssetString}scroll_svg.svg';
 
-  static const pngMan = '${baseAssetString}man.png';
+  static const pngMan = '${baseAssetString}man_5.png';
 }
 
 class SVGLoader extends StatelessWidget {
@@ -23,3 +23,14 @@ class SVGLoader extends StatelessWidget {
     return SvgPicture.asset(svgPath);
   }
 }
+
+const nameList = [
+  'Mike Ben',
+  'James Bond',
+  'T-Rex Ment',
+  'Mad Monkey',
+  'Finished Goat',
+  'Greta Good',
+  'Yur Papae',
+  'Chief Priest',
+];
