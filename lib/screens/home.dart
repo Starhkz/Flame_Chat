@@ -1,4 +1,6 @@
 import 'package:flame_chat/shared/app_strings.dart';
+import 'package:flame_chat/shared/cards.dart';
+import 'package:flame_chat/shared/models/profile.dart';
 import 'package:flame_chat/styling/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -105,25 +107,11 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: ((context, index) {
                   var wids = List.filled(
-                    5,
-                    Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Container(
-                        width: 95,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            gradient: const LinearGradient(
-                              colors: [
-                                Color.fromRGBO(3, 169, 241, 100),
-                                Color.fromRGBO(79, 88, 168, 100),
-                                Color.fromRGBO(160, 2, 90, 100)
-                              ],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                            )),
-                      ),
-                    ),
-                  );
+                      5,
+                      ProfileCard(
+                        profile: UserProfile(index),
+                        hasPhoto: false,
+                      ));
                   return wids[index];
                 }),
                 prototypeItem: null,
@@ -144,60 +132,9 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: ((context, index) {
                   var wids = List.filled(
                     8,
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 12),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.black,
-                            backgroundImage: AssetImage(AppString.pngMan),
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(
-                                  width: 186,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        AppString.userName,
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      Text(
-                                        AppString.moreMessages,
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w500,
-                                            color: Colors.white),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Text(
-                                    '2:15',
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 15, color: Colors.white),
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                    RecentChat(
+                      profile: UserProfile(index),
+                      isGroup: false,
                     ),
                   );
                   return wids[index];

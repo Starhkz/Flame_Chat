@@ -110,7 +110,10 @@ class _FavoritePageState extends State<FavoritePage> {
                     5,
                     Padding(
                       padding: const EdgeInsets.all(6.0),
-                      child: ProfileCard(profile: UserProfile(index)),
+                      child: ProfileCard(
+                        profile: UserProfile(index),
+                        hasPhoto: true,
+                      ),
                     ),
                   );
                   return wids[index];

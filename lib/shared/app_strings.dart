@@ -9,6 +9,7 @@ class AppString {
   static const svgAdd = '${baseAssetString}add_svg.svg';
   static const svgSearch = '${baseAssetString}search_svg.svg';
   static const svgScroll = '${baseAssetString}scroll_svg.svg';
+  static const svgDelete = '${baseAssetString}delete_svg.svg';
 
   static const pngMan = '${baseAssetString}man_5.png';
 }

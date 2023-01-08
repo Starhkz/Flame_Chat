@@ -7,6 +7,17 @@ class AppColors {
   static const darkBack = Color.fromARGB(255, 17, 19, 26);
 
   static const lightBack = Color.fromARGB(255, 65, 71, 86);
+
+  static const lightBlue = Color.fromARGB(255, 3, 170, 241);
+
+  static const orange = Color.fromARGB(255, 241, 130, 3);
+
+  static const lilac = Color.fromARGB(255, 180, 71, 234);
+
+  static const grey = Color.fromARGB(255, 55, 63, 78);
+
+  static const lightGrey = Color.fromARGB(255, 122, 129, 148);
+
   //grey
   static const greys = MaterialColor(
     0xffDCDCDC, //same as grey100 from the design guide
