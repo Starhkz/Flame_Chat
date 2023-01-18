@@ -10,8 +10,26 @@ class AppString {
   static const svgSearch = '${baseAssetString}search_svg.svg';
   static const svgScroll = '${baseAssetString}scroll_svg.svg';
   static const svgDelete = '${baseAssetString}delete_svg.svg';
+  static const svgDownload = '${baseAssetString}download_svg.svg';
+  static const svgCancel = '${baseAssetString}cancel_svg.svg';
+  static const svgChatActive = '${baseAssetString}chat_active_svg.svg';
+  static const svgChatInactive = '${baseAssetString}chat_inactive_svg.svg';
+  static const svgCamera = '${baseAssetString}camera_svg.svg';
 
   static const pngMan = '${baseAssetString}man_5.png';
+
+  static const cJan = 'January';
+  static const cFeb = 'February';
+  static const cMar = 'March';
+  static const cApr = 'April';
+  static const cMay = 'May';
+  static const cJun = 'June';
+  static const cJul = 'July';
+  static const cAug = 'August';
+  static const cSep = 'September';
+  static const cOct = 'October';
+  static const cNov = 'November';
+  static const cDec = 'December';
 }
 
 class SVGLoader extends StatelessWidget {
