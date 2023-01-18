@@ -28,3 +28,40 @@ String person(int num) {
     return womanPath(dub.toInt());
   }
 }
+
+double range(double value,
+    {double min = 0,
+    double max = 1,
+    bool asc = true,
+    double start = 0,
+    double stop = 1}) {
+  assert(min < max);
+  assert(min <= value && value <= max);
+  double range, diff, num, numRange, std;
+  numRange = stop - start;
+  range = max - min;
+  diff = value - min;
+  std = diff / range;
+  if (!numRange.isNegative && asc == false) {
+    num = stop - (std * numRange);
+    return num;
+  }
+  num = start + (std * numRange);
+  return num;
+}
+
+double limit(double value, double limit, bool isUpper) {
+  if (isUpper) {
+    if (value < limit) {
+      return value;
+    } else {
+      return limit;
+    }
+  } else {
+    if (value > limit) {
+      return value;
+    } else {
+      return limit;
+    }
+  }
+}
