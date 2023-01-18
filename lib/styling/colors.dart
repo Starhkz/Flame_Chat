@@ -18,6 +18,8 @@ class AppColors {
 
   static const lightGrey = Color.fromARGB(255, 122, 129, 148);
 
+  static const lightGreen = Color.fromARGB(255, 0, 172, 129);
+
   //grey
   static const greys = MaterialColor(
     0xffDCDCDC, //same as grey100 from the design guide
