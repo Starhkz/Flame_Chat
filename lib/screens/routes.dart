@@ -15,6 +15,7 @@ class _SwitchScreensState extends State<SwitchScreens> {
   Widget build(BuildContext context) {
     return PageView(
       children: const [
+        ChatRoom(),
         HomePage(),
         FavoritePage(),
         ChatRoomMenu(),
